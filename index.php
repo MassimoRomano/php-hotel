@@ -41,9 +41,9 @@
     ];
 
    
-    foreach($hotels as $hotel){
+    /* foreach($hotels as $hotel){
         echo $hotel['name'].'<br> '.$hotel['description'].'<br> '.$hotel['parking'].'<br> '.$hotel['vote'].'<br> '.$hotel['distance_to_center'].'<br>';
-    }
+    } */
 
 ?>
 
@@ -52,9 +52,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Php-Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    
+<div class="container my-5">
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Parcheggio</th>
+                <th scope="col">Voto</th>
+                <th scope="col">Km to Center</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($hotels as $index => $hotel) : ?>
+                <tr class="text-center">
+                    <th scope="row"><?php echo $index + 1; ?></th>
+                    <td><?php echo $hotel['name']; ?></td>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td><?php echo $hotel['parking']; ?></td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+
+
 </body>
 </html>
