@@ -40,6 +40,11 @@
 
     ];
 
+   
+    foreach($hotels as $hotel){
+        echo $hotel['name'].'<br> '.$hotel['description'].'<br> '.$hotel['parking'].'<br> '.$hotel['vote'].'<br> '.$hotel['distance_to_center'].'<br>';
+    }
+
 ?>
 
 <!DOCTYPE html>
